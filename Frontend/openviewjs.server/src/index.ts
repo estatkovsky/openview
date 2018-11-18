@@ -5,9 +5,7 @@ import * as ReactDOM from 'react-dom';
 import { AppComponent } from './components/app';
 
 import './scss/main.scss';
-import 'react-day-picker/lib/style.css';
 import 'font-awesome/css/font-awesome.css';
-import 'rc-slider/assets/index.css';
 
 function preRenderSetup() {
     window.onerror = (msg, url, line, column, stack) => {

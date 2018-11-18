@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "es6",
+      "moduleResolution": "node",
+      "declaration": true,
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "strictNullChecks": true,
+      "alwaysStrict": true,
+      "sourceMap": true,
+      "jsx": "react",
+      "noLib": false,
+      "suppressImplicitAnyIndexErrors": true,
+      "outDir": "./dist"
+    },
+    "compileOnSave": false,
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+}
+  

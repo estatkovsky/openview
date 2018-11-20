@@ -2,5 +2,6 @@
 package-lock.json
 bin
 obj
+packages
 *.suo
 .vs

@@ -7,5 +7,7 @@
         public string RemoteAddress { get; set; }
 
         public string User { get; set; }
+
+        public string WebSockerUrl { get; set; }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OpenView.Server.Agents;
+using OpenView.Server.Agents.Domain;
 using OpenView.Server.DataTransfer;
 
 namespace OpenView.Server.Controllers
@@ -7,8 +9,17 @@ namespace OpenView.Server.Controllers
     [ApiController]
     public class AgentController : ControllerBase
     {
-        public void Post([FromBody] AgentRegistration data)
+        private readonly AgentService _agentService;
+
+        public AgentController(AgentService agentService)
         {
+            _agentService = agentService;
+        }
+
+        public void Post([FromBody] AgentRegistration model)
+        {
+            var p = new AgentCreateParameter();
+            var data = _agentService.Create(p);
         }
     }
 }

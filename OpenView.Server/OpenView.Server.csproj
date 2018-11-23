@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OpenView.Server.Agents\OpenView.Server.Agents.csproj" />
     <ProjectReference Include="..\OpenView.Server.DataTransfer\OpenView.Server.DataTransfer.csproj" />
   </ItemGroup>
 

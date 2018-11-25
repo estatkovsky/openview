@@ -1,7 +1,9 @@
 ﻿namespace OpenView.Server.DataTransfer
 {
-    public class AgentRegistration
+    public class AgentModel
     {
+        public string SessionId { get; set; }
+
         public string HostName { get; set; }
 
         public string RemoteAddress { get; set; }

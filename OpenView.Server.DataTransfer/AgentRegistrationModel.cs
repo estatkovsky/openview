@@ -1,6 +1,6 @@
-﻿namespace OpenView.Server.Agents.Domain
+﻿namespace OpenView.Server.DataTransfer
 {
-    public class Agent
+    public class AgentRegistrationModel
     {
         public string SessionId { get; set; }
 

@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using OpenView.Server.Agents;
+using OpenView.Server.Infrastructure;
 
 namespace OpenView.Server
 {
@@ -23,7 +25,12 @@ namespace OpenView.Server
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(options =>
+            {
+                options.Filters.Add<LoggerExceptionFilterAttribute>();
+            })
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton<AgentsService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

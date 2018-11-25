@@ -11,6 +11,8 @@ namespace OpenView.Agent
 
         public static int WebSocketConcurrentConnectionsLimit { get { return int.Parse(GetConfigValue("web_socket_concurrent_connections_limit")); } }
 
+        public static string ServerUrl { get { return GetConfigValue("server_url"); } }
+
         private static string GetConfigValue(string key)
         {
             if (_cachedSettings.ContainsKey(key))
